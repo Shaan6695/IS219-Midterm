@@ -1,6 +1,6 @@
 from decimal import Decimal
 from typing import Callable, List
-
+#W!
 from calculator.calculation import Calculation
 
 class Calculations:

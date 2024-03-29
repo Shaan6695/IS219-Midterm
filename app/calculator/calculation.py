@@ -1,4 +1,5 @@
 '''
+W!
     This code snippet demonstrates how to define a class in Python that 
     encapsulates a mathematical calculation, including two operands (a and b) 
     and an operation (like add or subtract). 

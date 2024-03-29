@@ -1,5 +1,5 @@
 from decimal import Decimal
-# Define the functions with type hints
+# W! Define the functions with type hints
 def add(a: Decimal, b: Decimal) -> Decimal:
     return a + b
 
