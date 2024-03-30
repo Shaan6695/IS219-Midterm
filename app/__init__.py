@@ -3,6 +3,7 @@ import pkgutil
 import importlib
 import sys
 from app.commands import CommandHandler, Command
+from app.plugins.menu import MenuCommand
 from dotenv import load_dotenv
 import logging
 import logging.config
@@ -21,7 +22,11 @@ class App:
         if os.path.exists(logging_conf_path):
             logging.config.fileConfig(logging_conf_path, disable_existing_loggers=False)
         else:
-            logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+            logging.basicConfig(filename='logs/app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+            console_handler = logging.StreamHandler(sys.stdout)  # Add a stream handler to log to the console
+            console_handler.setLevel(logging.INFO)  # Set the level for console logging
+            console_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))  # Set formatter
+            logging.getLogger().addHandler(console_handler)  # Add the console handler to the root logger
         logging.info("Logging configured.")
 
     def load_environment_variables(self):
@@ -34,17 +39,18 @@ class App:
 
     def load_plugins(self):
         plugins_package = 'app.plugins'
-        plugins_path = plugins_package.replace('.', '/')
-        if not os.path.exists(plugins_path):
-            logging.warning(f"Plugins directory '{plugins_path}' not found.")
-            return
-        for _, plugin_name, is_pkg in pkgutil.iter_modules([plugins_path]):
+        for _, plugin_name, is_pkg in pkgutil.iter_modules([plugins_package.replace('.', '/')]):
             if is_pkg:
-                try:
-                    plugin_module = importlib.import_module(f'{plugins_package}.{plugin_name}')
-                    self.register_plugin_commands(plugin_module, plugin_name)
-                except ImportError as e:
-                    logging.error(f"Error importing plugin {plugin_name}: {e}")
+                plugin_module = importlib.import_module(f'{plugins_package}.{plugin_name}')
+                for item_name in dir(plugin_module):
+                    item = getattr(plugin_module, item_name)
+                    try:
+                        if issubclass(item, (Command)):
+                            self.command_handler.register_command(plugin_name, item())
+                    except TypeError:
+                        continue
+
+        self.command_handler.register_command("menu", MenuCommand(self.command_handler))
 
     def start(self):
         self.load_plugins()
@@ -53,20 +59,23 @@ class App:
             while True:
                 cmd_input = input(">>> ").strip()
                 if cmd_input.lower() == 'exit':
-                    logging.info("Application exit.")
-                    sys.exit(0)  # Use sys.exit(0) for a clean exit, indicating success.
+                    logging.info("Application shutdown.")
+                    sys.exit(0)
                 try:
                     self.command_handler.execute_command(cmd_input)
-                except KeyError:  # Assuming execute_command raises KeyError for unknown commands
+                except KeyError:
                     logging.error(f"Unknown command: {cmd_input}")
-                    sys.exit(1)  # Use a non-zero exit code to indicate failure or incorrect command.
         except KeyboardInterrupt:
             logging.info("Application interrupted and exiting gracefully.")
-            sys.exit(0)  # Assuming a KeyboardInterrupt should also result in a clean exit.
+            sys.exit(0)
         finally:
             logging.info("Application shutdown.")
 
+def start_app():
+    app = App()
+    app.load_plugins()  # Call load_plugins to register plugins
+    app.start()
+
 
 if __name__ == "__main__":
-    app = App()
-    app.start()
+    start_app()
