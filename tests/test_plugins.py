@@ -18,7 +18,7 @@ def test_discord_command(capsys):
     discord_command = DiscordCommand()
     discord_command.execute()
     captured = capsys.readouterr()
-    assert captured.out.strip() == "I will send something on discord"
+    assert captured.out.strip() == "I will send something to discord"
 
 def test_greet_command(capsys):
     """Test GreetCommand execution"""

@@ -1,5 +1,5 @@
 """
-Tests for CommandHandler class.
+Tests for the CommandHandler class.
 """
 
 # Import the necessary module
@@ -47,4 +47,3 @@ class TestCommandHandler:
         self.command_handler.add_to_history('test_command')
         # Verify that the command is added to history
         assert 'test_command' in self.command_handler.get_history()
-        

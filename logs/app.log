@@ -16,3 +16,62 @@
 2024-03-29 18:14:36,104 - root - INFO - Command 'greet' from plugin 'greet' registered.
 2024-03-29 18:24:06,847 - root - INFO - Logging configured.
 2024-03-29 18:24:06,849 - root - INFO - Environment variables loaded.
+2024-03-29 23:50:26,290 - root - INFO - Logging configured.
+2024-03-29 23:50:26,293 - root - INFO - Environment variables loaded.
+2024-03-29 23:50:26,297 - root - INFO - Application started. Type 'exit' to exit.
+2024-03-29 23:50:26,298 - root - INFO - Application shutdown.
+2024-03-29 23:50:26,302 - root - INFO - Application shutdown.
+2024-03-29 23:50:26,310 - root - INFO - Logging configured.
+2024-03-29 23:50:26,310 - root - INFO - Environment variables loaded.
+2024-03-29 23:50:26,316 - root - INFO - Application started. Type 'exit' to exit.
+2024-03-29 23:50:26,316 - root - INFO - Application shutdown.
+2024-03-29 23:50:26,316 - root - INFO - Application shutdown.
+2024-03-29 23:50:26,358 - root - INFO - Calculation history saved to CSV.
+2024-03-29 23:50:26,651 - root - INFO - I will email you
+2024-03-29 23:50:26,680 - root - INFO - I will send something to discord
+2024-03-29 23:50:26,699 - root - INFO - Hello, World!
+2024-03-29 23:50:26,721 - root - INFO - Goodbye
+2024-03-29 23:51:45,417 - root - INFO - Logging configured.
+2024-03-29 23:51:45,417 - root - INFO - Environment variables loaded.
+2024-03-29 23:51:45,419 - root - INFO - Application started. Type 'exit' to exit.
+2024-03-29 23:51:45,419 - root - INFO - Application shutdown.
+2024-03-29 23:51:45,419 - root - INFO - Application shutdown.
+2024-03-29 23:51:45,425 - root - INFO - Logging configured.
+2024-03-29 23:51:45,426 - root - INFO - Environment variables loaded.
+2024-03-29 23:51:45,428 - root - INFO - Application started. Type 'exit' to exit.
+2024-03-29 23:51:45,428 - root - INFO - Application shutdown.
+2024-03-29 23:51:45,428 - root - INFO - Application shutdown.
+2024-03-29 23:51:45,435 - root - INFO - Calculation history saved to CSV.
+2024-03-29 23:51:45,460 - root - INFO - Calculation history saved to CSV.
+2024-03-29 23:51:45,463 - root - INFO - Calculation history saved to CSV.
+2024-03-29 23:51:45,466 - root - INFO - Calculation history saved to CSV.
+2024-03-29 23:51:45,467 - root - ERROR - Error: Division by zero is not allowed
+2024-03-29 23:51:45,468 - root - ERROR - Unknowwwwn operation: invalid
+2024-03-29 23:51:45,469 - root - ERROR - Invalid number input: invalid or 3 is not a valid number.
+2024-03-29 23:51:45,470 - root - ERROR - Invalid number input: 5 or invalid is not a valid number.
+2024-03-29 23:51:45,493 - root - INFO - I will email you
+2024-03-29 23:51:45,513 - root - INFO - I will send something to discord
+2024-03-29 23:51:45,652 - root - INFO - Hello, World!
+2024-03-29 23:51:45,658 - root - INFO - Goodbye
+2024-03-29 23:52:04,341 - root - INFO - Logging configured.
+2024-03-29 23:52:04,341 - root - INFO - Environment variables loaded.
+2024-03-29 23:52:04,344 - root - INFO - Application started. Type 'exit' to exit.
+2024-03-29 23:52:04,344 - root - INFO - Application shutdown.
+2024-03-29 23:52:04,345 - root - INFO - Application shutdown.
+2024-03-29 23:52:04,352 - root - INFO - Logging configured.
+2024-03-29 23:52:04,352 - root - INFO - Environment variables loaded.
+2024-03-29 23:52:04,354 - root - INFO - Application started. Type 'exit' to exit.
+2024-03-29 23:52:04,355 - root - INFO - Application shutdown.
+2024-03-29 23:52:04,355 - root - INFO - Application shutdown.
+2024-03-29 23:52:04,363 - root - INFO - Calculation history saved to CSV.
+2024-03-29 23:52:04,397 - root - INFO - Calculation history saved to CSV.
+2024-03-29 23:52:04,399 - root - INFO - Calculation history saved to CSV.
+2024-03-29 23:52:04,401 - root - INFO - Calculation history saved to CSV.
+2024-03-29 23:52:04,402 - root - ERROR - Error: Division by zero is not allowed
+2024-03-29 23:52:04,404 - root - ERROR - Unknowwwwn operation: invalid
+2024-03-29 23:52:04,405 - root - ERROR - Invalid number input: invalid or 3 is not a valid number.
+2024-03-29 23:52:04,407 - root - ERROR - Invalid number input: 5 or invalid is not a valid number.
+2024-03-29 23:52:04,433 - root - INFO - I will email you
+2024-03-29 23:52:04,456 - root - INFO - I will send something to discord
+2024-03-29 23:52:04,471 - root - INFO - Hello, World!
+2024-03-29 23:52:04,486 - root - INFO - Goodbye
