@@ -1,6 +1,12 @@
-# main.py
-from app import App    
-
-# You must put this in your main.py because this forces the program to start when you run it from the command line.
-if __name__ == "__main__":
-    app = App().start()  # Instantiate an instance of App
+import sys
+import os
+import logging
+import logging.config
+from decimal import Decimal, InvalidOperation
+import pandas as pd
+from app.commands import CommandHandler
+from app.plugins.menu import MenuCommand
+from app.plugins.discord import DiscordCommand
+from app.plugins.email import EmailCommand
+from app.plugins.goodbye import GoodbyeCommand
+from app.plugins.greet import GreetCommand
