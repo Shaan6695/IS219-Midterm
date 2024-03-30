@@ -5,3 +5,17 @@
 2024-03-29 23:38:47,717 - INFO - greet
 2024-03-29 23:38:50,520 - ERROR - An error occurred: 'CommandHandler' object has no attribute 'add_to_history'
 2024-03-29 23:39:00,210 - INFO - Exiting program.
+2024-03-29 23:41:36,728 - INFO - Available commands:
+2024-03-29 23:41:36,730 - INFO - discord
+2024-03-29 23:41:36,731 - INFO - email
+2024-03-29 23:41:36,731 - INFO - goodbye
+2024-03-29 23:41:36,732 - INFO - greet
+2024-03-29 23:41:39,194 - ERROR - An error occurred: 'CommandHandler' object has no attribute 'add_to_history'
+2024-03-29 23:41:43,287 - ERROR - An unexpected error occurred: 'CommandHandler' object has no attribute 'get_history'
+2024-03-29 23:45:37,433 - INFO - Available commands:
+2024-03-29 23:45:37,436 - INFO - discord
+2024-03-29 23:45:37,436 - INFO - email
+2024-03-29 23:45:37,436 - INFO - goodbye
+2024-03-29 23:45:37,437 - INFO - greet
+2024-03-29 23:45:41,170 - INFO - Calculation history saved to CSV.
+2024-03-29 23:45:50,255 - INFO - Exiting program.
