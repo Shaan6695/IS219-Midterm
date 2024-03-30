@@ -14,3 +14,5 @@
 2024-03-29 18:14:36,101 - root - INFO - Command 'exit' from plugin 'exit' registered.
 2024-03-29 18:14:36,103 - root - INFO - Command 'goodbye' from plugin 'goodbye' registered.
 2024-03-29 18:14:36,104 - root - INFO - Command 'greet' from plugin 'greet' registered.
+2024-03-29 18:24:06,847 - root - INFO - Logging configured.
+2024-03-29 18:24:06,849 - root - INFO - Environment variables loaded.

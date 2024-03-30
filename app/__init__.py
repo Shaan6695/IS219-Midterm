@@ -46,14 +46,6 @@ class App:
                 except ImportError as e:
                     logging.error(f"Error importing plugin {plugin_name}: {e}")
 
-    def register_plugin_commands(self, plugin_module, plugin_name):
-        for item_name in dir(plugin_module):
-            item = getattr(plugin_module, item_name)
-            if isinstance(item, type) and issubclass(item, Command) and item is not Command:
-                # Command names are now explicitly set to the plugin's folder name
-                self.command_handler.register_command(plugin_name, item())
-                logging.info(f"Command '{plugin_name}' from plugin '{plugin_name}' registered.")
-
     def start(self):
         self.load_plugins()
         logging.info("Application started. Type 'exit' to exit.")
